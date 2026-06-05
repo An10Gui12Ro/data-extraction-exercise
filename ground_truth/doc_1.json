@@ -1,0 +1,12 @@
+{
+    "document_type": "will",
+    "testator": "John Michael Smith",
+    "executors": ["Sarah Elizabeth Smith"],
+    "assets": [
+        "Real property located at 742 Evergreen Terrace, Springfield, Illinois",
+        "Chase Bank checking account ending in 4521",
+        "2019 Honda Accord"
+    ],
+    "date": "2023-03-15",
+    "state": "Illinois"
+}

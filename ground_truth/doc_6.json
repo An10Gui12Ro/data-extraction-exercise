@@ -1,0 +1,14 @@
+{
+    "document_type": "trust",
+    "grantors": ["James Takeshi Nakamura"],
+    "trustees": ["James Takeshi Nakamura"],
+    "assets": [
+        "Real property located at 563 Mapleton Avenue, Boulder, Colorado 80304",
+        "Commercial real property located at 1200 Walnut Street, Suite 300, Boulder, Colorado 80302",
+        "JPMorgan Chase checking account ending in 4402",
+        "Fidelity Investments brokerage account ending in 7719",
+        "Ally Bank high-yield savings account ending in 8856"
+    ],
+    "date": "2022-11-10",
+    "state": "Colorado"
+}

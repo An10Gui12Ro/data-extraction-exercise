@@ -1,0 +1,13 @@
+{
+    "document_type": "trust",
+    "grantors": ["Henry Wei Chen", "Margaret Li Chen"],
+    "trustees": ["Margaret Li Chen"],
+    "assets": [
+        "Real property located at 8214 Ravenna Avenue NE, Seattle, Washington 98115",
+        "Real property located at 1040 Lakeview Boulevard, Bellevue, Washington 98004",
+        "Vanguard investment account ending in 5541",
+        "U.S. Treasury Bonds held in TreasuryDirect account ending in 3378"
+    ],
+    "date": "2023-09-22",
+    "state": "Washington"
+}
