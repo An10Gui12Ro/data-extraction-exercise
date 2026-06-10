@@ -1,6 +1,9 @@
-"""Data models for document classification and extraction. Uses Pydantic for OpenAI structured outputs."""
+"""
+Data models for document classification and extraction. Uses Pydantic for OpenAI structured outputs.
+"""
 
 from pydantic import BaseModel
+from typing import Literal
 
 
 class ClassificationResult(BaseModel):
@@ -12,7 +15,7 @@ class ClassificationResult(BaseModel):
     exactly "will" or "trust". Look into typing.Literal.
     """
     # TODO: Define the field(s) for this schema (~1-2 lines)
-    pass
+    document_type: Literal["will", "trust"]
 
 
 # --- DO NOT MODIFY BELOW THIS LINE ---

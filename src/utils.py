@@ -1,6 +1,7 @@
 """Utility functions for normalizing extracted data."""
 
 import re
+from datetime import datetime
 
 
 def normalize_name(name: str) -> str:
@@ -21,7 +22,13 @@ def normalize_name(name: str) -> str:
     TODO: Implement this function.
     """
     # TODO: Implement (~5-8 lines)
-    pass
+    if not name or not isinstance(name, str):
+        return ""
+    pattern = r'(Mr\.|Mrs\.|Ms\.|Dr\.|Jr\.|Sr\.|III|II|Esq\.)'
+    name = name.strip()
+    name = re.sub(pattern, "", name, flags=re.IGNORECASE)
+    name = " ".join(name.split())
+    return name.title()
 
 
 def normalize_date(date_str: str) -> str:
@@ -36,4 +43,14 @@ def normalize_date(date_str: str) -> str:
     TODO: Implement this function.
     """
     # TODO: Implement (~5-8 lines)
-    pass
+    # Actualmente se cubren los casos puestos en el docstring mas 2 extras: "%d-%m-%Y" y "%b %d, %Y"
+    # Sería buena idea agregar todas las posibles combinaciones para mayor robustes (%b, %D, %y)
+    if not date_str or not isinstance(date_str, str):
+        return ""
+    formats = ["%B %d, %Y", "%b %d, %Y", "%m/%d/%Y", "%Y-%m-%d", "%d-%m-%Y"]
+    for fmt in formats:
+        try:
+            return datetime.strptime(date_str.strip(), fmt).strftime("%Y-%m-%d")
+        except ValueError:
+            continue
+    return date_str

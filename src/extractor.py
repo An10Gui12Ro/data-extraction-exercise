@@ -16,7 +16,7 @@ def extract_will(document_text: str) -> WillExtraction:
         2. Return the parsed result
     """
     # TODO: Implement this function (~2-3 lines)
-    pass
+    return call_llm(WILL_EXTRACTION_PROMPT, document_text, WillExtraction, "gpt-4o")
 
 
 def extract_trust(document_text: str) -> TrustExtraction:
@@ -29,7 +29,7 @@ def extract_trust(document_text: str) -> TrustExtraction:
         2. Return the parsed result
     """
     # TODO: Implement this function (~2-3 lines)
-    pass
+    return call_llm(TRUST_EXTRACTION_PROMPT, document_text, TrustExtraction, "gpt-4o")
 
 
 def process_document(document_text: str) -> WillExtraction | TrustExtraction:
@@ -42,4 +42,7 @@ def process_document(document_text: str) -> WillExtraction | TrustExtraction:
         3. Return the extraction result
     """
     # TODO: Implement this function (~5 lines)
-    pass
+    doc_type = classify_document(document_text)
+    if doc_type == "will":
+        return extract_will(document_text)
+    return extract_trust(document_text)

@@ -22,4 +22,5 @@ def classify_document(document_text: str) -> str:
         3. Return it
     """
     # TODO: Implement this function (~2-3 lines)
-    pass
+    response = call_llm(CLASSIFICATION_PROMPT, document_text, ClassificationResult)
+    return response.document_type
